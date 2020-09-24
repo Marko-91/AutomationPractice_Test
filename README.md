@@ -30,4 +30,4 @@ This is a test suite written in Java designed to automaticaly test [Automation T
 - Intellij IDE
 <br>
 <br>
-![This is the test suite.](assets/testSample.png?raw=true "This is the test suite.")
+![This is the test suite.](https://github.com/Marko-91/AutomationPractice_Test/blob/master/assets/testSample.png?raw=true)
