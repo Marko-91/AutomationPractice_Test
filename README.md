@@ -6,7 +6,6 @@ This is a test suite written in Java designed to test [Automation Test Web Page]
 > Tests are run using testNG with soft and hard assert and special methods are used to test elements on the web page.
 > Data is generated and read by Apache POI library.<br>
 > All the test classes in Java can be executed by running the *testng.xml* file.
-
 ## Functionalities and Web Elements tested
 ***
 - Dropdowns
@@ -18,7 +17,6 @@ This is a test suite written in Java designed to test [Automation Test Web Page]
 - Shopping
 - Search bar
 - Search results
-
 ## Technologies and Key Concepts
 ***
 - Java
@@ -29,3 +27,4 @@ This is a test suite written in Java designed to test [Automation Test Web Page]
 - POM
 - Reusability
 - Data Driven Framework
+- Intellij IDE
