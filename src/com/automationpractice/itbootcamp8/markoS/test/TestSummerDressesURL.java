@@ -23,8 +23,6 @@ public class TestSummerDressesURL {
         String urlActual_1 = Globals.wd.getCurrentUrl();
         sa.assertEquals(Globals.wd.getCurrentUrl(), urlExpected);
 
-        // wd.navigate().back();
-
         Home.hoverDressesDropdown(Globals.wd, Globals.action);
         Home.clickSummerDress(Globals.wd);
         urlExpected = "http://automationpractice.com/index.php?id_category=11&controller=category";

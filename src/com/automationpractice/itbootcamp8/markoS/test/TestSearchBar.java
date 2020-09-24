@@ -27,13 +27,11 @@ public class TestSearchBar {
 
         for (WebElement colorPicker: SearchBar.getColorPickers(Globals.wd)) {
             for (WebElement colorSquare: colorPicker.findElements(By.xpath(".//li/a"))) {
-                System.out.println(colorSquare.getCssValue("background"));
                 if (SearchBar.isCssAttributePresent(colorSquare, "background")) {
                     isContained = true;
                     break;
                 }
             }
-            System.out.println(isContained);
             sa.assertTrue(isContained, "Checking is RGB (241, 196, 15) present in element"); // Check after each grid element
             isContained = false; // Reset boolean value so that it can find in next color picker </ul>
         }

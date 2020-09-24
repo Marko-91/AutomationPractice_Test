@@ -2,7 +2,10 @@ package com.automationpractice.itbootcamp8.markoS.test;
 
 import com.automationpractice.itbootcamp8.markoS.pages.*;
 import com.automationpractice.itbootcamp8.markoS.readExcel.ReadExcelFile;
+import org.junit.Assert;
 import org.testng.annotations.*;
+
+import java.util.concurrent.TimeUnit;
 
 public class TestSendMessage {
 
@@ -16,6 +19,8 @@ public class TestSendMessage {
         ContactMessage.setMessageBody(Globals.wd, message);
         ContactMessage.setFile(Globals.wd, "/home/marko/Pictures/Wallpapers/20200708_133558.jpg");
         ContactMessage.clickSendBtn(Globals.wd);
+        Globals.wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        Assert.assertTrue(ContactMessage.checkSuccess(Globals.wd));
         ContactMessage.clickBackBtn(Globals.wd);
     }
 

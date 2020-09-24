@@ -13,7 +13,10 @@ public class SummerDresses {
     private static String proceedXpath = "//span[contains(text(),'Proceed to checkout')]";
     private static String quantityXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/input[1]";
     private static String itemNameXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/p[1]/a[1]";
-    private static String colorWhiteSummaryXpath = "//td[@class='cart_description']//a[contains(text(),'Color : White, Size : S')]";
+    private static String colorWhiteSummaryXpath = "//td[@class='cart_description']//a[contains(text(),'Color : White, Size : M')]";
+    private static String dropDownSizeXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/form[1]/div[1]/div[2]/div[1]/fieldset[1]/div[1]/div[1]/select[1]";
+    private static String mediumSizeXpath = "//option[contains(text(),'M')]";
+    private static String boxShopXpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]";
 
     public static WebElement getSummerDress_2(WebDriver wd) {
         return wd.findElement(By.xpath(summerDress_2Xpath));
@@ -30,9 +33,12 @@ public class SummerDresses {
     public static WebElement getWhiteColor(WebDriver wd) {
         return wd.findElement(By.xpath(whiteColorXpath));
     }
+    public static WebElement getDropdownSize(WebDriver wd) {return wd.findElement(By.xpath(dropDownSizeXpath));}
+    public static WebElement getMediumSize(WebDriver wd) {return wd.findElement(By.xpath(mediumSizeXpath));}
     public static WebElement getAddToCartBtn(WebDriver wd) {return wd.findElement(By.xpath(addToCartBtnXpath));}
     public static WebElement getItemName(WebDriver wd) {return wd.findElement(By.xpath(itemNameXpath));}
     public static WebElement getWhiteColorSummary(WebDriver wd) {return wd.findElement(By.xpath(colorWhiteSummaryXpath));}
+    public static WebElement getBoxShop(WebDriver wd) {return wd.findElement(By.xpath(boxShopXpath));}
 
     public static void hoverSummerDress_2(WebDriver wd, Actions action) {
         action.moveToElement(getSummerDress_2(wd)).build().perform();
@@ -46,6 +52,9 @@ public class SummerDresses {
     public static void clickCross(WebDriver wd) {
         getCross(wd).click();
     }
+    public static void clickDropdownSize(WebDriver wd) {getDropdownSize(wd).click();}
+    public static void clickMediumSize(WebDriver wd) {getMediumSize(wd).click();}
+    public static void clickBoxShop(WebDriver wd) {getBoxShop(wd).click();}
     public static void clickCheckout(WebDriver wd) {
         getCheckout(wd).click();
     }

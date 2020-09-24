@@ -13,6 +13,7 @@ public class ContactMessage {
     private static String messageBodyXpath = "//textarea[@id='message']";
     private static String sendBtnXpath = "//span[contains(text(),'Send')]";
     private static String backBtnXpath = "//div[@class='columns-container']//div[@class='row']//span[1]";
+    private static String sendSuccessXpath = "//p[@class='alert alert-success']";
 
     private static WebElement getSubjectHeading(WebDriver wd) {return wd.findElement(By.xpath(subjectHeadingXpath));}
     private static WebElement getDropdownElement(WebDriver wd) {return wd.findElement(By.xpath(dropdownElementXpath));}
@@ -22,6 +23,9 @@ public class ContactMessage {
     private static WebElement getMessageBody(WebDriver wd) {return wd.findElement(By.xpath(messageBodyXpath));}
     private static WebElement getSendBtn(WebDriver wd) {return wd.findElement(By.xpath(sendBtnXpath));}
     private static WebElement getBackBtn(WebDriver wd) {return wd.findElement(By.xpath(backBtnXpath));}
+    private static WebElement getSendSuccess(WebDriver wd) {
+        return wd.findElement(By.xpath(sendSuccessXpath));
+    }
 
     public static void clickCustomerService(WebDriver wd) {
         getSubjectHeading(wd).click();
@@ -55,5 +59,10 @@ public class ContactMessage {
 
     public static void clickBackBtn(WebDriver wd) {
         getBackBtn(wd).click();
+    }
+
+    public static boolean checkSuccess(WebDriver wd) {
+        if (getSendSuccess(wd).isDisplayed()) return true;
+        return false;
     }
 }
