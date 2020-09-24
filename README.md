@@ -28,3 +28,6 @@ This is a test suite written in Java designed to automaticaly test [Automation T
 - Reusability
 - Data Driven Framework
 - Intellij IDE
+<br>
+<br>
+![This is the test suite.](/home/marko/Pictures/testSample.png "test suite")
