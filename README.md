@@ -1,4 +1,4 @@
-AutomationPractice_Test
+# AutomationPractice_Test
 ***
 This is a test suite written in Java designed to automaticaly test [Automation Test Web Page](http://automationpractice.com/index.php) web page elements and functionalities with Selenium and TestNG.<br><br>
 > The test suite is desinged with Page Object Model (POM) concept and with the separation of testing logic from test data on the one hand and page/path DOM getters, on the other.
