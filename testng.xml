@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite verbose="1" name="Woman Shopping Suite" annotations="JDK">
+    <test name="global">
+        <classes>
+            <class name="com.automationpractice.itbootcamp8.markoS.test.Globals"/>
+        </classes>
+    </test>
+
+    <test name="summerDressesURL">
+        <classes>
+            <class name="com.automationpractice.itbootcamp8.markoS.test.TestSummerDressesURL"/>
+        </classes>
+    </test>
+
+    <test name="dressShop">
+        <classes>
+            <class name="com.automationpractice.itbootcamp8.markoS.test.TestDressShop"/>
+        </classes>
+    </test>
+
+    <test name="searchBar">
+        <classes>
+            <class name="com.automationpractice.itbootcamp8.markoS.test.TestSearchBar"/>
+        </classes>
+    </test>
+
+    <test name="contactLinks">
+        <classes>
+            <class name="com.automationpractice.itbootcamp8.markoS.test.TestContactLinks"/>
+        </classes>
+    </test>
+
+    <test name="sendMessages">
+        <classes>
+            <class name="com.automationpractice.itbootcamp8.markoS.test.TestSendMessage"/>
+        </classes>
+    </test>
+</suite>
